@@ -1,39 +1,34 @@
 package com.hasom.logger;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-/**
- * Handles requests for the application home page.
- */
-@Controller
-public class LoggerInterceptor {
+public class LoggerInterceptor extends HandlerInterceptorAdapter{
+	protected Log log = LogFactory.getLog(LoggerInterceptor.class);
+
 	
-	private static final Logger logger = LoggerFactory.getLogger(LoggerInterceptor.class);
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+		if(log.isDebugEnabled()){
+			log.debug("============================= START =============================");
+			log.debug(" Request URI \t:" + request.getRequestURI());
+		}
+		
+		return super.preHandle(request, response, handler);
+	}
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+	
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+		if(log.isDebugEnabled()){
+			log.debug("============================= END =============================");
+		}
+		super.postHandle(request, response, handler, modelAndView);
 	}
 	
 }

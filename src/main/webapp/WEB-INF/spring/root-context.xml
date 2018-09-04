@@ -10,11 +10,10 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@istudy.iptime.org:7000:ORCL" />		
-		<property name="username" value="kh00901" />
+		<property name="username" value="KH00901" />
 		<property name="password" value="oracle" /> 
-		여긴 db연결이 되는대로 반드시 수정 하겠습니다.-->
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

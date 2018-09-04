@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC " - //mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- ModelMapping -->
+	<typeAliases>
+
+	<!-- 	<typeAlias type="com.hasom.member.MemberModel" alias="memberModel" />
+		
+		<typeAlias type="com.hasom.admin.ChartModel" alias="ChartModel"/> -->
+		
+	</typeAliases>
+
+	<!-- SQL 정의한 xml문서 Mapping -->
+	<mappers>
+	<!-- 
+		<mapper resource="mybatis/config/AdminSQL.xml"/> -->
+
+	</mappers>
+
+</configuration>

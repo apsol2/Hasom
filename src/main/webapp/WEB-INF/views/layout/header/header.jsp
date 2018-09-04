@@ -14,7 +14,7 @@
     <meta name="keywords" content="">
 
     <title>
-        FELINE
+        hasom
     </title>
 
     <meta name="keywords" content="">
@@ -25,19 +25,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- styles -->
-    <link href="/feline/resources/common/css/font-awesome.css" rel="stylesheet">
-    <link href="/feline/resources/common/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/feline/resources/common/css/animate.min.css" rel="stylesheet">
-    <link href="/feline/resources/common/css/owl.carousel.css" rel="stylesheet">
-    <link href="/feline/resources/common/css/owl.theme.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/font-awesome.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/animate.min.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/owl.carousel.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/owl.theme.css" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="/feline/resources/common/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/hasom/resources/common/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="/feline/resources/common/css/custom.css" rel="stylesheet">
+    <link href="/hasom/resources/common/css/custom.css" rel="stylesheet">
 
-    <script src="/feline/resources/common/js/respond.min.js"></script>
+    <script src="/hasom/resources/common/js/respond.min.js"></script>
     
 </head>
 
@@ -53,15 +53,15 @@
             <c:choose>
             	<c:when test="${sessionScope.id == null and sessionScope.n_id == null and sessionScope.adminId == null}">
             		<ul class="menu">
-                    <li><a href="/feline/member/login.cat">로그인</a>
+                    <li><a href="/hasom/member/login.cat">로그인</a>
                     </li>
-                    <li><a href="/feline/member/joinMemberCheck.cat">회원가입</a>
+                    <li><a href="/hasom/member/joinMemberCheck.cat">회원가입</a>
                     </li>
-                    <li><a href="/feline/member/findId.cat">아이디 찾기</a>
+                    <li><a href="/hasom/member/findId.cat">아이디 찾기</a>
                     </li>
-                    <li><a href="/feline/member/findPwd.cat">비밀번호 찾기</a>
+                    <li><a href="/hasom/member/findPwd.cat">비밀번호 찾기</a>
                     </li>
-                    <li><a href="/feline/member/b_orderSelectForm.cat">주문조회</a></li>
+                    <li><a href="/hasom/member/b_orderSelectForm.cat">주문조회</a></li>
             	</c:when>
             	<c:otherwise>
             		<c:choose>            	
@@ -69,32 +69,32 @@
             			<ul class="menu">
 	                    	<li><a class="cell">${sessionScope.n_id} 님 환영합니다.</a>
 	                    	</li>
-	                    	<li><a href="/feline/member/logout.cat">로그아웃</a>
+	                    	<li><a href="/hasom/member/logout.cat">로그아웃</a>
 	            			</li>
-	            			<li><a href="/feline/member/b_orderSelectForm.cat">주문조회</a></li> 				
+	            			<li><a href="/hasom/member/b_orderSelectForm.cat">주문조회</a></li> 				
             		</c:when>
             		<c:when test="${sessionScope.adminId ne null }">
             			<ul class="menu">
             				<li><a class="cell">${sessionScope.adminId }님 환영합니다.</a>
             				</li>
-            				<li><a href="/feline/admin/main.cat">관리자페이지</a></li>
-            				<li><a href="/feline/member/logout.cat">로그아웃</a>
+            				<li><a href="/hasom/admin/main.cat">관리자페이지</a></li>
+            				<li><a href="/hasom/member/logout.cat">로그아웃</a>
 	            			</li>
             		</c:when>
             		<c:otherwise>
             			<ul class="menu">
             				<li><a class="cell">${sessionScope.id} 회원님 환영합니다.</a>
             				</li>
-            				<li><a href="/feline/member/mypage.cat">마이페이지</a>
+            				<li><a href="/hasom/member/mypage.cat">마이페이지</a>
             				</li>
-            				<li><a href="/feline/member/logout.cat">로그아웃</a>
+            				<li><a href="/hasom/member/logout.cat">로그아웃</a>
 	            			</li>
-	            			<li><a href="/feline/member/orderList.cat">주문조회</a>
+	            			<li><a href="/hasom/member/orderList.cat">주문조회</a>
             		</c:otherwise>
             	</c:choose>                  
             	</c:otherwise>
             </c:choose>
-            <li><a href="/feline/notice/noticeList.cat">고객센터</a>
+            <li><a href="/hasom/notice/noticeList.cat">고객센터</a>
             </li>
            </ul>
            </div>
@@ -110,8 +110,8 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="/feline/main.cat">
-                    <img src="/feline/resources/common/img/log.png" width="100%" height="100%" alt="feline logo" class="hidden-xs">
+                <a class="navbar-brand home" href="/hasom/main.cat">
+                    <img src="/hasom/resources/common/img/log.png" width="100%" height="100%" alt="hasom logo" class="hidden-xs">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -129,7 +129,7 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="/feline/main.cat">Home</a>
+                    <li class="active"><a href="/hasom/main.cat">Home</a>
                     </li>
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">사료 <b class="caret"></b></a>
@@ -137,16 +137,16 @@
                             <li>
                                 <div class="yamm-content">
                                     	<div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=0"><h5>유기농/홀리스틱</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=0"><h5>유기농/홀리스틱</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=1"><h5>피부/피모건강</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=1"><h5>피부/피모건강</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=2"><h5>헤어볼케어</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=2"><h5>헤어볼케어</h5></a>
                                         </div>
                                           <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=3"><h5>다이어트/비뇨건강</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=3"><h5>다이어트/비뇨건강</h5></a>
                                         </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -159,17 +159,17 @@
                             <li>
                                 <div class="yamm-content">
                                     	<div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=4"><h5>캔/파우치</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=4"><h5>캔/파우치</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=5"><h5>저키/소시지</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=5"><h5>저키/소시지</h5></a>
                                            
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=6"><h5>비스켓/트릿</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=6"><h5>비스켓/트릿</h5></a>
                                         </div>
                                           <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=7"><h5>캣닢/캣그라스</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=7"><h5>캣닢/캣그라스</h5></a>
                                         </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -182,17 +182,17 @@
                             <li>
                                 <div class="yamm-content">
                                     	<div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=8"><h5>응고형 모래</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=8"><h5>응고형 모래</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=9"><h5>흡수형 모래</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=9"><h5>흡수형 모래</h5></a>
                                            
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=10"><h5>화장실/패드</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=10"><h5>화장실/패드</h5></a>
                                         </div>
                                           <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=11"><h5>기타</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=11"><h5>기타</h5></a>
                                         </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -205,16 +205,16 @@
                             <li>
                                 <div class="yamm-content">
                                     	<div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=12"><h5>공/봉제인형</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=12"><h5>공/봉제인형</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=13"><h5>레이저/낚시</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=13"><h5>레이저/낚시</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=14"><h5>막대</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=14"><h5>막대</h5></a>
                                         </div>
                                           <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=15"><h5>캣닢</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=15"><h5>캣닢</h5></a>
                                         </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -227,16 +227,16 @@
                             <li>
                                 <div class="yamm-content">
                                     	<div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=16"><h5>샴푸/린스</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=16"><h5>샴푸/린스</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=17"><h5>구강관리</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=17"><h5>구강관리</h5></a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=18"><h5>눈/귀/피부&피모건강</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=18"><h5>눈/귀/피부&피모건강</h5></a>
                                         </div>
                                           <div class="col-sm-3">
-                                            <a href="/feline/goods/goodsCategoryList.cat?goods_category=19"><h5>브러쉬/털관리</h5></a>
+                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=19"><h5>브러쉬/털관리</h5></a>
                                         </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -252,7 +252,7 @@
             <div class="navbar-buttons">
 				<c:if test="${sessionScope.id!=null || sessionScope.n_id!=null}">
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a onclick="javascript:location.href='/feline/basket/basketList.cat'" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm"></span></a>
+                    <a onclick="javascript:location.href='/hasom/basket/basketList.cat'" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm"></span></a>
                 </div>
                 </c:if>
                 <!--/.nav-collapse -->
@@ -266,7 +266,7 @@
 
             <div class="collapse clearfix" id="search">
 
-                <form action="/feline/goods/goodsSearchList.cat" class="navbar-form" role="search">
+                <form action="/hasom/goods/goodsSearchList.cat" class="navbar-form" role="search">
                     <div class="input-group">
                         <input type="text" class="form-control" name="search" placeholder="Search">
                         <input type="hidden" name="category" value="">
@@ -294,14 +294,14 @@
     
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-    <script src="/feline/resources/common/js/jquery-1.11.0.min.js"></script>
-    <script src="/feline/resources/common/js/bootstrap.min.js"></script>
-    <script src="/feline/resources/common/js/jquery.cookie.js"></script>
-    <script src="/feline/resources/common/js/waypoints.min.js"></script>
-    <script src="/feline/resources/common/js/modernizr.js"></script>
-    <script src="/feline/resources/common/js/bootstrap-hover-dropdown.js"></script>
-    <script src="/feline/resources/common/js/owl.carousel.min.js"></script>
-    <script src="/feline/resources/common/js/front.js"></script>
+    <script src="/hasom/resources/common/js/jquery-1.11.0.min.js"></script>
+    <script src="/hasom/resources/common/js/bootstrap.min.js"></script>
+    <script src="/hasom/resources/common/js/jquery.cookie.js"></script>
+    <script src="/hasom/resources/common/js/waypoints.min.js"></script>
+    <script src="/hasom/resources/common/js/modernizr.js"></script>
+    <script src="/hasom/resources/common/js/bootstrap-hover-dropdown.js"></script>
+    <script src="/hasom/resources/common/js/owl.carousel.min.js"></script>
+    <script src="/hasom/resources/common/js/front.js"></script>
     
     </body>
 </html>
