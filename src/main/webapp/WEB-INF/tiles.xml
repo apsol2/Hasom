@@ -5,23 +5,119 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 	
 <tiles-definitions>
+	
+	<definition name="template" template="/WEB-INF/views/layout/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/layout/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	</definition>
+	
+	
+	<definition name="admin" template="/WEB-INF/views/layout/layout4.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header/adminheader.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/admintemplate.jsp" />
+		<put-attribute name="lefter" value="/WEB-INF/views/layout/lefter/adminLefter.jsp" />
+	</definition>
+	
+	
+	<definition name="main" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/main/main.jsp" />
+	</definition>
+	
+	
+	<definition name="field" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/introduction/Field.jsp" />
+	</definition>
 
-		<!-- Main Page -->
-	<definition name="default" template="/WEB-INF/views/layout/main.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/layout/header/header.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/layout/body.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	<definition name="greetings" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/introduction/Greetings.jsp" />
 	</definition>
 	
-	<definition name="main" template="/WEB-INF/views/layout/main.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/layout/header/header.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/layout/body.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	<definition name="map" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/introduction/Map.jsp" />
+	</definition>
+	
+	<definition name="performance" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/introduction/Performance.jsp" />
+	</definition>
+	
+	<definition name="recruit" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/introduction/Recruit.jsp" />
 	</definition>
 	
 	
-	<definition name="wiredth" extends="main">
+	<definition name="wiredth" extends="template">
 		<put-attribute name="body" value="/WEB-INF/views/sensorproduct/WiredTH.jsp" />
 	</definition>
+
+	<definition name="wiredlansensor" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/sensorproduct/WiredLANSensor.jsp" />
+	</definition>
+	
+	<definition name="wl3gsensor" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/sensorproduct/WL3GSensor.jsp" />
+	</definition>
+	
+	<definition name="wlwifisensor" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/sensorproduct/WLWIFISensor.jsp" />
+	</definition>
+	
+	
+	<definition name="alarm" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/mobilealarm/Alarm.jsp" />
+	</definition>
+
+	<definition name="computation" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/mobilealarm/Computation.jsp" />
+	</definition>
+	
+	
+	<definition name="ccpackage" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/application/CCPackage.jsp" />
+	</definition>
+	
+	<definition name="smartfactory" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/application/SmartFactory.jsp" />
+	</definition>
+	
+	<definition name="tccloudingservice" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/application/TCCloudingService.jsp" />
+	</definition>
+
+	<definition name="tcpackage" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/application/TCPackage.jsp" />
+	</definition>
+	
+	<definition name="webcdevelopment" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/application/WebCDevelopment.jsp" />
+	</definition>
+	
+	
+	<definition name="example" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/example/example.jsp" />
+	</definition>
+	
+	
+	<definition name="download" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/Download.jsp" />
+	</definition>
+
+	<definition name="faq" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/FAQ.jsp" />
+	</definition>
+	
+	<definition name="notice" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/Notice.jsp" />
+	</definition>
+	
+	<definition name="software" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/Software.jsp" />
+	</definition>
+	
+	<definition name="qna" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/QnA.jsp" />
+	</definition>
+	
+
 	
 </tiles-definitions>

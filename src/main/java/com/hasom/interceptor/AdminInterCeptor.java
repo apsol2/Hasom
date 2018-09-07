@@ -19,13 +19,13 @@ public class AdminInterCeptor extends HandlerInterceptorAdapter {
   
 	  // Login false
 	  if(userid == null){
-		  response.sendRedirect("/homepage/admin/adminLogin.do");
+		  response.sendRedirect("/hasom/admin/adminLogin.do");
 	 		return false;
 	  }else if(userid.equals("admin")){
 	 		return super.preHandle(request, response, handler);
 	  }
 	  else{
-	 		response.sendRedirect("/homepage/main.do");
+	 		response.sendRedirect("/hasom/main.do");
 	   		return false;
 	  }
   

@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.hasom.homepage">
+	<logger name="com.hasom.hasom">
 		<level value="info" />
 	</logger>
 	

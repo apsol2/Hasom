@@ -19,7 +19,7 @@ h1 {
   font-size: 40px;
 }
 #top {
-  background: #555555;
+  background: #cae4ff;
   padding: 10px 0;
 }
 #top .offer {
@@ -58,7 +58,7 @@ h1 {
   display: inline-block;
 }
 #top ul.menu > li a {
-  color: #eeeeee;
+  color: #0053da;
 }
 #top ul.menu > li + li:before {
   content: "|\00a0";
@@ -886,7 +886,7 @@ h1 {
   font-weight: 300;
 }
 #footer {
-  background: #e0e0e0;
+  background: #b5d7ff;
   padding: 20px 0;
 }
 #footer ul {
@@ -935,8 +935,8 @@ h1 {
   background-color: #4a7f45;
 }
 #copyright {
-  background: #333;
-  color: #ccc;
+  background: #8fbfef;
+  color: #5a5a5a;
   padding: 20px 0;
   font-size: 12px;
 }
@@ -998,8 +998,10 @@ h1 {
   }
 }
 .yamm .dropdown.yamm-fw .dropdown-menu {
-  left: 0;
-  right: 0;
+  /* left: 0; */
+  /* right: 0; */
+  width: auto;
+  position: absolute;
 }
 /* Original Boostrap template overwrite */
 /* nav */
@@ -1293,8 +1295,8 @@ h1 {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #4993e4;
-  color: #555555;
+  background-color: #7dbef2;
+  color: #eeeeee;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -1309,7 +1311,7 @@ h1 {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555555;
-    background-color: #4993e4;
+    background-color: #7dbef2;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -1330,7 +1332,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f0f0f0;
+  background-color: #d2e9ff;
 }
 a {
   color: #4993e4;
@@ -1386,8 +1388,8 @@ hr {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #4993e4;
-  border-color: #3386e1;
+  background-color: #7dbef2;
+  border-color: #a0cff5;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1395,8 +1397,8 @@ hr {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #257edf;
-  border-color: #1c68bb;
+  background-color: #7dbef2;
+  border-color: #a0cff5;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -1418,8 +1420,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #4993e4;
-  border-color: #3386e1;
+  background-color: #7dbef2;
+  border-color: #a0cff5;
 }
 .btn-primary .badge {
   color: #4993e4;

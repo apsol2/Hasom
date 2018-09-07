@@ -13,12 +13,6 @@
     <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
     <meta name="keywords" content="">
 
-    <title>
-        hasom
-    </title>
-
-    <meta name="keywords" content="">
-
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
@@ -30,14 +24,12 @@
     <link href="/hasom/resources/common/css/animate.min.css" rel="stylesheet">
     <link href="/hasom/resources/common/css/owl.carousel.css" rel="stylesheet">
     <link href="/hasom/resources/common/css/owl.theme.css" rel="stylesheet">
-
+    
+	<!-- your stylesheet with modifications -->
+	<link href="/hasom/resources/common/css/custom.css" rel="stylesheet">
+	    
     <!-- theme stylesheet -->
-    <link href="/hasom/resources/common/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
-
-    <!-- your stylesheet with modifications -->
-    <link href="/hasom/resources/common/css/custom.css" rel="stylesheet">
-
-    <script src="/hasom/resources/common/js/respond.min.js"></script>
+    <link href="/hasom/resources/common/css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
     
 </head>
 
@@ -46,73 +38,21 @@
  _________________________________________________________ -->
     <div id="top">
         <div class="container">
-            <div class="col-md-6 offer">
-                
-            </div> 
-            <div class="col-md-6">
-            <c:choose>
-            	<c:when test="${sessionScope.id == null and sessionScope.n_id == null and sessionScope.adminId == null}">
-            		<ul class="menu">
-                    <li><a href="/hasom/member/login.cat">로그인</a>
+            <div class="col-md-12">
+            	<ul class="menu">
+                    <li>
+                    	<a href="/hasom/main.do">English</a>
                     </li>
-                    <li><a href="/hasom/member/joinMemberCheck.cat">회원가입</a>
+                    <li>
+                    	<a href="/hasom/main.do">한국어</a>
                     </li>
-                    <li><a href="/hasom/member/findId.cat">아이디 찾기</a>
-                    </li>
-                    <li><a href="/hasom/member/findPwd.cat">비밀번호 찾기</a>
-                    </li>
-                    <li><a href="/hasom/member/b_orderSelectForm.cat">주문조회</a></li>
-            	</c:when>
-            	<c:otherwise>
-            		<c:choose>            	
-            		<c:when test="${sessionScope.n_id ne null}">
-            			<ul class="menu">
-	                    	<li><a class="cell">${sessionScope.n_id} 님 환영합니다.</a>
-	                    	</li>
-	                    	<li><a href="/hasom/member/logout.cat">로그아웃</a>
-	            			</li>
-	            			<li><a href="/hasom/member/b_orderSelectForm.cat">주문조회</a></li> 				
-            		</c:when>
-            		<c:when test="${sessionScope.adminId ne null }">
-            			<ul class="menu">
-            				<li><a class="cell">${sessionScope.adminId }님 환영합니다.</a>
-            				</li>
-            				<li><a href="/hasom/admin/main.cat">관리자페이지</a></li>
-            				<li><a href="/hasom/member/logout.cat">로그아웃</a>
-	            			</li>
-            		</c:when>
-            		<c:otherwise>
-            			<ul class="menu">
-            				<li><a class="cell">${sessionScope.id} 회원님 환영합니다.</a>
-            				</li>
-            				<li><a href="/hasom/member/mypage.cat">마이페이지</a>
-            				</li>
-            				<li><a href="/hasom/member/logout.cat">로그아웃</a>
-	            			</li>
-	            			<li><a href="/hasom/member/orderList.cat">주문조회</a>
-            		</c:otherwise>
-            	</c:choose>                  
-            	</c:otherwise>
-            </c:choose>
-            <li><a href="/hasom/notice/noticeList.cat">고객센터</a>
-            </li>
-           </ul>
+            	</ul>
            </div>
         </div>
     </div>
-
-    <!-- *** TOP BAR END *** -->
-
-    <!-- *** NAVBAR ***
- _________________________________________________________ -->
-
-    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
-        <div class="container">
-            <div class="navbar-header">
-
-                <a class="navbar-brand home" href="/hasom/main.cat">
-                    <img src="/hasom/resources/common/img/log.png" width="100%" height="100%" alt="hasom logo" class="hidden-xs">
-                </a>
+   	<div class="navbar navbar-default yamm" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
                         <span class="sr-only">Toggle navigation</span>
@@ -123,177 +63,148 @@
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
-            </div>
-            <!--/.navbar-header -->
-
-            <div class="navbar-collapse collapse" id="navigation">
-
+	        </div>
+			<div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="/hasom/main.cat">Home</a>
+               		 <a href="/hasom/main.do">
+					 	<img src="/hasom/resources/common/img/logo.png" width="20%" height="20%" align="left">
+					 </a>
+			        <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">회사 소개 <b class="caret"></b></a>
+                        <ul class="dropdown-menu" align="center">
+                            <li>
+                                <div class="yamm-content">
+                                   	<div class="row-sm-3">
+                                        <a href="/hasom/introduction/greetings.do"><h5><font size="2">인삿말</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/introduction/field.do"><h5><font size="2">사업 분야</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/introduction/performance.do"><h5><font size="2">구축 실적</font></h5></a>
+                                	</div>
+                                	<div class="row-sm-3">
+                                        <a href="/hasom/introduction/recruit.do"><h5><font size="2">인사 채용</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/introduction/map.do"><h5><font size="2">찾아 오시는 길</font></h5></a>
+                                    </div>
+                                </div>
+                         	</li>
+                        </ul>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">사료 <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">센서 제품 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
-                                    	<div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=0"><h5>유기농/홀리스틱</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=1"><h5>피부/피모건강</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=2"><h5>헤어볼케어</h5></a>
-                                        </div>
-                                          <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=3"><h5>다이어트/비뇨건강</h5></a>
-                                        </div>
+                                   	<div class="row-sm-3">
+                                        <a href="/hasom/sensorproduct/wiredth.do"><h5><font size="2">유선 온습도 센서</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/sensorproduct/wiredlansensor.do"><h5><font size="2">유선 LAN 센서</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/sensorproduct/wl3gsensor.do"><h5><font size="2">무선 3G 센서</font></h5></a>
+                                	</div>
+                                	<div class="row-sm-3">
+                                        <a href="/hasom/sensorproduct/wlwifisensor.do"><h5><font size="2">무선 Wi-fi 센서</font></h5></a>
+                                    </div>
+                                </div>
+                         	</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">모바일 알람<b class="caret"></b></a>
+                    	<ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                   	<div class="row-sm-3">
+                                        <a href="/hasom/mobilealarm/alarm.do"><h5><font size="2">모바일 경보</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/mobilealarm/computation.do"><h5><font size="2">모바일 전산실</font></h5></a>
+                                    </div>
                                 </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">간식 <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">어플리케이션/솔루션<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
-                                    	<div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=4"><h5>캔/파우치</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=5"><h5>저키/소시지</h5></a>
-                                           
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=6"><h5>비스켓/트릿</h5></a>
-                                        </div>
-                                          <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=7"><h5>캣닢/캣그라스</h5></a>
-                                        </div>
+                                   	<div class="row-sm-3">
+                                        <a href="/hasom/application/tcpackage.do"><h5><font size="2">온도 관리 패키지</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/application/tccloudingservice.do"><h5><font size="2">온도 관리 클라우딩 서비스 패키지</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/application/smartfactory.do"><h5><font size="2">스마트팩토리 생산량 관리 클라우딩 패키지</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/application/ccpackage.do"><h5><font size="2">전산실 관리 패키지</font></h5></a>
+                                	</div>
+                                	<div class="row-sm-3">
+                                        <a href="/hasom/application/webcdevelopment.do"><h5><font size="2">웹 관리 서비스 고객 맞춤형 개발</font></h5></a>
+                                	</div>
                                 </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">모래와 화장실 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    	<div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=8"><h5>응고형 모래</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=9"><h5>흡수형 모래</h5></a>
-                                           
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=10"><h5>화장실/패드</h5></a>
-                                        </div>
-                                          <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=11"><h5>기타</h5></a>
-                                        </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
+                        <a href="/hasom/example/example.do" class="dropdown-toggle" data-hover="dropdown" data-delay="200">적용 사례<b class="caret"></b></a>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">장난감 <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">게시판<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
-                                    	<div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=12"><h5>공/봉제인형</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=13"><h5>레이저/낚시</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=14"><h5>막대</h5></a>
-                                        </div>
-                                          <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=15"><h5>캣닢</h5></a>
-                                        </div>
+                                	<div class="row-sm-3">
+                                        <a href="/hasom/board/software.do"><h5><font size="2">S/W 다운로드</font></h5></a>
+                                    </div>
+                                   	<div class="row-sm-3">
+                                        <a href="/hasom/board/notice.do"><h5><font size="2">공지 사항</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/board/qna.do"><h5><font size="2">질의 응답</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/board/faq.do"><h5><font size="2">FAQ</font></h5></a>
+                                    </div>
+                                    <div class="row-sm-3">
+                                        <a href="/hasom/board/download.do"><h5><font size="2">자료실</font></h5></a>
+                                	</div>
                                 </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">위생용품 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    	<div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=16"><h5>샴푸/린스</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=17"><h5>구강관리</h5></a>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=18"><h5>눈/귀/피부&피모건강</h5></a>
-                                        </div>
-                                          <div class="col-sm-3">
-                                            <a href="/hasom/goods/goodsCategoryList.cat?goods_category=19"><h5>브러쉬/털관리</h5></a>
-                                        </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
-                    </li>
-
+                    <li class="navbar-collapse collapse right" id="search-not-mobile">
+	           	        <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+	           	            <span class="sr-only">Toggle search</span>
+	           	            <i class="fa fa-search"></i>
+	           	        </button>
+           	   		</li>
                 </ul>
-
             </div>
-            <!--/.nav-collapse -->
-
-            <div class="navbar-buttons">
-				<c:if test="${sessionScope.id!=null || sessionScope.n_id!=null}">
-                <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a onclick="javascript:location.href='/hasom/basket/basketList.cat'" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm"></span></a>
-                </div>
-                </c:if>
-                <!--/.nav-collapse -->
-                <div class="navbar-collapse collapse right" id="search-not-mobile">
-           	        <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
-           	            <span class="sr-only">Toggle search</span>
-           	            <i class="fa fa-search"></i>
-           	        </button>
-           	    </div>
-            </div>
-
             <div class="collapse clearfix" id="search">
-
-                <form action="/hasom/goods/goodsSearchList.cat" class="navbar-form" role="search">
+                <form action="/hasom/goods/goodsSearchList.do" class="navbar-form" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="search" placeholder="Search">
-                        <input type="hidden" name="category" value="">
-                        <input type="hidden" name="minprice" value="">
-                        <input type="hidden" name="maxprice" value="">
-                        <input type="hidden" name="fromyear" value="">
-                        <input type="hidden" name="frommonth" value="">
-                        <input type="hidden" name="toyear" value="">
-                        <input type="hidden" name="tomonth" value="">
-                        <span class="input-group-btn" style="margin-left:20px">
+                    	<input type="text" class="form-control" name="search" placeholder="Search">
+                        <span class="input-group-btn">
                         	<button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                         </span>
                     </div>
                 </form>
-
             </div>
-            <!--/.nav-collapse -->
-
         </div>
-        <!-- /.container -->
-    </div>
-    <!-- /#navbar -->
-
-    <!-- *** NAVBAR END *** -->
-    
-    <!-- *** SCRIPTS TO INCLUDE ***
- _________________________________________________________ -->
+	</div>
+<!-- _________________________________________________________ -->
+ 	<script src="/hasom/resources/common/js/respond.min.js"></script>
     <script src="/hasom/resources/common/js/jquery-1.11.0.min.js"></script>
     <script src="/hasom/resources/common/js/bootstrap.min.js"></script>
     <script src="/hasom/resources/common/js/jquery.cookie.js"></script>

@@ -50,26 +50,27 @@
 </script>
 <!-- End Channel Plugin -->
 </head>
+<body>
 <div id="all">
 	<div id="content">
 		<div class="container">
 			<div class="col-md-12">
 				<div id="main-slider">
 					<div class="item">
-						<img src="/feline/resources/common/img/mainboard.jpg" alt="noImage" width="100%"
+						<img src="/hasom/resources/common/img/mainboard.jpg" alt="noImage" width="100%"
 							class="img-responsive">
 					</div>
 					<div class="item">
 						<img class="img-responsive"
-							src="/feline/resources/common/img/mainboard2.jpg" alt="noImage" width="100%">
+							src="/hasom/resources/common/img/mainboard2.jpg" alt="noImage" width="100%">
 					</div>
 					<div class="item">
 						<img class="img-responsive"
-							src="/feline/resources/common/img/mainboard3.jpg" alt="noImage" width="100%">
+							src="/hasom/resources/common/img/mainboard3.jpg" alt="noImage" width="100%">
 					</div>
 					<div class="item">
 						<img class="img-responsive"
-							src="/feline/resources/common/img/mainboard4.jpg" alt="noImage" width="100%">
+							src="/hasom/resources/common/img/mainboard4.jpg" alt="noImage" width="100%">
 					</div>
 				</div>
 				<!-- /#main-slider -->
@@ -150,20 +151,20 @@
 										<div class="flipper" style="height: 200px">
 											<div class="front">
 
-												<c:url var="viewURL" value="/goods/goodsView.cat">
+												<c:url var="viewURL" value="/goods/goodsView.do">
 													<c:param name="goods_num">
 													${newGoodsList.goods_num}
 												</c:param>
 												</c:url>
 
 												<a href="${viewURL}"> <img
-													src="/feline/resources/upload/images/${newGoodsList.goods_image_savname}"
+													src="/hasom/resources/upload/images/${newGoodsList.goods_image_savname}"
 													width="100%" height="100%" />
 												</a>
 											</div>
 											<div class="back">
 												<a href="${viewURL}"> <img
-													src="/feline/resources/upload/images/${newGoodsList.goods_image_savname}"
+													src="/hasom/resources/upload/images/${newGoodsList.goods_image_savname}"
 													width="100%" height="100%" />
 												</a>
 											</div>

@@ -16,11 +16,17 @@
 	
 	<context:component-scan base-package="com.hasom" />
 
-	<!-- <beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<beans:property name="basenames"/>
+	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>messages.boardMessage_ko</beans:value>
+				<beans:value>messages.goodsMessage_ko</beans:value>
+				<beans:value>messages.userMessage_ko</beans:value>
+			</beans:list>
+		</beans:property>
 		<beans:property name="defaultEncoding" value="UTF-8"/>
 	</beans:bean>
- -->
+
 	<!-- Aspect Annotation -->
 	<aop:aspectj-autoproxy />
 	<aop:config proxy-target-class="true" />
@@ -40,24 +46,27 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 		<beans:property name="order" value="2"></beans:property>
-	</beans:bean>
+	</beans:bean> -->
+	
 	
 	<beans:bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"> 
-		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView"/>
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
 		<beans:property name="order" value="1"></beans:property> 
 	</beans:bean>
 	
-	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+	<beans:bean id="tilesviewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
+	
+	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<beans:property name="definitions">
 			<beans:list>
 				<beans:value>/WEB-INF/tiles.xml</beans:value>
 			</beans:list>
 		</beans:property>
-		<beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory"/>
+		<beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory"/>
 	</beans:bean>
 	
 	
@@ -66,5 +75,5 @@
 		<beans:property name="defaultEncoding" value="UTF-8" />
 		<beans:property name="maxUploadSize" value="10485760" />
 	</beans:bean>
-	
+
 </beans:beans>
